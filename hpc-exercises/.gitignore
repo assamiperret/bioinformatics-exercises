@@ -1,0 +1,4 @@
+*.out
+*.err
+*.txt
+slurm-*.out

@@ -5,3 +5,24 @@
 # FastQC output
 *_fastqc.html
 *_fastqc.zip
+
+# reference files
+*.fa
+*.fasta
+*.fa.fai
+*.dict
+
+# BWA index files
+*.amb
+*.ann
+*.bwt
+*.pac
+*.sa
+
+# Large binary files
+*.bam
+*.bai
+*.sam
+
+# Results and logs
+*.log

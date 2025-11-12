@@ -7,6 +7,6 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --partition=pcourseb
 
-module load FastQC/0.11.9-Java-11
+ module load FastQC/0.11.9-Java-11
 
-fastqc --extract SRR1027171_1.fastq.gz SRR1027171_2.fastq.gz --threads 4 -o ~/course/dataPreProcess/raw_fastqc_output
+fastqc --extract ~/course/dataPreProcess/raw_data/SRR1027171_1.fastq.gz ~/course/dataPreProcess/raw_data/SRR1027171_2.fastq.gz --threads  4 -o ~/course/dataPreProcess/raw_fastqc_output

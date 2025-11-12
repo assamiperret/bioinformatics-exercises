@@ -1,0 +1,41 @@
+Read1 before filtering:
+total reads: 44434722
+total bases: 2666083320
+Q20 bases: 2559699331(96.0097%)
+Q30 bases: 2475243153(92.8419%)
+
+Read2 before filtering:
+total reads: 44434722
+total bases: 2666083320
+Q20 bases: 2456531433(92.1401%)
+Q30 bases: 2361225154(88.5653%)
+
+Read1 after filtering:
+total reads: 39781914
+total bases: 2385021501
+Q20 bases: 2346385827(98.3801%)
+Q30 bases: 2280878901(95.6335%)
+
+Read2 after filtering:
+total reads: 39781914
+total bases: 2385021501
+Q20 bases: 2334012947(97.8613%)
+Q30 bases: 2253428383(94.4825%)
+
+Filtering result:
+reads passed filter: 79563828
+reads failed due to low quality: 8584966
+reads failed due to too many N: 43534
+reads failed due to too short: 677116
+reads with adapter trimmed: 1479540
+bases trimmed due to adapters: 16955470
+
+Duplication rate: 24.4342%
+
+Insert size peak (evaluated by paired-end reads): 86
+
+JSON report: fastp.json
+HTML report: fastp.html
+
+fastp -w 4 -q 15 -z 5 -l 50 -i /home/student38/course/dataPreProcess/raw_data/SRR1027171_1.fastq.gz -I /home/student38/course/dataPreProcess/raw_data/SRR1027171_2.fastq.gz -o /home/student38/course/dataPreProcess/clean_fastq_data/SRR1027171_1.clean.fq.gz -O /home/student38/course/dataPreProcess/clean_fastq_data/SRR1027171_2.clean.fq.gz 
+fastp v0.23.4, time used: 112 seconds

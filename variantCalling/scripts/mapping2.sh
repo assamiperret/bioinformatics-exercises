@@ -1,6 +1,6 @@
 #!/bin/bash
 # Slurm options
-
+#SBATCH --mail-user=assami.perret@unibe.ch
 #SBATCH --mail-type=fail,end
 #SBATCH --job-name="mapping"
 #SBATCH --chdir=.

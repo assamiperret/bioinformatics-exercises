@@ -1,0 +1,55 @@
+WARNING: GATK v4.2.6.1 support for Java 11 is in beta state. Use at your own risk.
+
+The following have been reloaded with a version change:
+  1) Java/11.0.18 => Java/17.0.6
+
+[bwa_idx_build] fail to open file 'chr14.fa' : No such file or directory
+[E::fai_build3_core] Failed to open the file chr14.fa
+[faidx] Could not build fai index chr14.fa.fai
+Using GATK jar /mnt/ss/sib/ibu/rocky8/2023072800/software/GATK/4.2.6.1-GCCcore-10.3.0-Java-11/gatk-package-4.2.6.1-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /mnt/ss/sib/ibu/rocky8/2023072800/software/GATK/4.2.6.1-GCCcore-10.3.0-Java-11/gatk-package-4.2.6.1-local.jar CreateSequenceDictionary R=chr14.fa O=chr14.dict
+INFO	2025-11-12 19:00:41	CreateSequenceDictionary	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    CreateSequenceDictionary -R chr14.fa -O chr14.dict
+**********
+
+
+19:00:41.422 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/mnt/ss/sib/ibu/rocky8/2023072800/software/GATK/4.2.6.1-GCCcore-10.3.0-Java-11/gatk-package-4.2.6.1-local.jar!/com/intel/gkl/native/libgkl_compression.so
+[Wed Nov 12 19:00:41 CET 2025] CreateSequenceDictionary OUTPUT=chr14.dict REFERENCE=chr14.fa    TRUNCATE_NAMES_AT_WHITESPACE=true NUM_SEQUENCES=2147483647 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=2 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Wed Nov 12 19:00:41 CET 2025] Executing as student38@binfservas45 on Linux 4.18.0-553.33.1.el8_10.x86_64 amd64; OpenJDK 64-Bit Server VM 17.0.6+10; Deflater: Intel; Inflater: Intel; Provider GCS is available; Picard version: 4.2.6.1
+[Wed Nov 12 19:00:41 CET 2025] picard.sam.CreateSequenceDictionary done. Elapsed time: 0.00 minutes.
+Runtime.totalMemory()=2076049408
+To get help, see http://broadinstitute.github.io/picard/index.html#GettingHelp
+htsjdk.samtools.SAMException: Error opening file: chr14.fa
+	at htsjdk.samtools.util.IOUtil.openFileForReading(IOUtil.java:702)
+	at htsjdk.samtools.reference.FastaSequenceFile.<init>(FastaSequenceFile.java:64)
+	at htsjdk.samtools.reference.ReferenceSequenceFileFactory.getReferenceSequenceFile(ReferenceSequenceFileFactory.java:144)
+	at htsjdk.samtools.reference.ReferenceSequenceFileFactory.getReferenceSequenceFile(ReferenceSequenceFileFactory.java:100)
+	at htsjdk.samtools.reference.ReferenceSequenceFileFactory.getReferenceSequenceFile(ReferenceSequenceFileFactory.java:88)
+	at picard.util.SequenceDictionaryUtils$SamSequenceRecordsIterator.<init>(SequenceDictionaryUtils.java:82)
+	at picard.sam.CreateSequenceDictionary.lambda$getSamSequenceRecordsIterable$0(CreateSequenceDictionary.java:169)
+	at picard.sam.CreateSequenceDictionary.doWork(CreateSequenceDictionary.java:234)
+	at picard.cmdline.CommandLineProgram.instanceMain(CommandLineProgram.java:308)
+	at org.broadinstitute.hellbender.cmdline.PicardCommandLineProgramExecutor.instanceMain(PicardCommandLineProgramExecutor.java:37)
+	at org.broadinstitute.hellbender.Main.runCommandLineProgram(Main.java:160)
+	at org.broadinstitute.hellbender.Main.mainEntry(Main.java:203)
+	at org.broadinstitute.hellbender.Main.main(Main.java:289)
+Caused by: java.nio.file.NoSuchFileException: chr14.fa
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:218)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160)
+	at htsjdk.samtools.util.IOUtil.openFileForReading(IOUtil.java:698)
+	... 12 more

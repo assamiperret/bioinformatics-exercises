@@ -1,0 +1,2 @@
+FATAL:   While checking container encryption: could not open image /mnt/containers/apptainer/snpeff:5.2--hdfd78af_1: failed to retrieve path for /mnt/containers/apptainer/snpeff:5.2--hdfd78af_1: lstat /mnt/containers/apptainer/snpeff:5.2--hdfd78af_1: no such file or directory
+FATAL:   While checking container encryption: could not open image /mnt/containers/apptainer/snpeff:5.2--hdfd78af_1: failed to retrieve path for /mnt/containers/apptainer/snpeff:5.2--hdfd78af_1: lstat /mnt/containers/apptainer/snpeff:5.2--hdfd78af_1: no such file or directory

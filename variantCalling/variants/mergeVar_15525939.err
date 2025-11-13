@@ -1,0 +1,17 @@
+WARNING: GATK v4.2.6.1 support for Java 11 is in beta state. Use at your own risk.
+
+The following have been reloaded with a version change:
+  1) Java/17.0.6 => Java/11.0.18
+
+
+The following have been reloaded with a version change:
+  1) Java/11.0.18 => Java/17.0.6
+
+Using GATK jar /mnt/ss/sib/ibu/rocky8/2023072800/software/GATK/4.2.6.1-GCCcore-10.3.0-Java-11/gatk-package-4.2.6.1-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /mnt/ss/sib/ibu/rocky8/2023072800/software/GATK/4.2.6.1-GCCcore-10.3.0-Java-11/gatk-package-4.2.6.1-local.jar MergeVcfs -I BT_HPC.flt.snps.vcf -I BT_HPC.flt.indels.vcf -O BT_HPC.flt.var.vcf
+11:51:42.056 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/mnt/ss/sib/ibu/rocky8/2023072800/software/GATK/4.2.6.1-GCCcore-10.3.0-Java-11/gatk-package-4.2.6.1-local.jar!/com/intel/gkl/native/libgkl_compression.so
+[Thu Nov 13 11:51:42 CET 2025] MergeVcfs --INPUT BT_HPC.flt.snps.vcf --INPUT BT_HPC.flt.indels.vcf --OUTPUT BT_HPC.flt.var.vcf --VERBOSITY INFO --QUIET false --VALIDATION_STRINGENCY STRICT --COMPRESSION_LEVEL 2 --MAX_RECORDS_IN_RAM 500000 --CREATE_INDEX true --CREATE_MD5_FILE false --GA4GH_CLIENT_SECRETS client_secrets.json --help false --version false --showHidden false --USE_JDK_DEFLATER false --USE_JDK_INFLATER false
+[Thu Nov 13 11:51:42 CET 2025] Executing as student38@binfservas45 on Linux 4.18.0-553.33.1.el8_10.x86_64 amd64; OpenJDK 64-Bit Server VM 17.0.6+10; Deflater: Intel; Inflater: Intel; Provider GCS is available; Picard version: Version:4.2.6.1
+[Thu Nov 13 11:51:43 CET 2025] picard.vcf.MergeVcfs done. Elapsed time: 0.02 minutes.
+Runtime.totalMemory()=2076049408

@@ -4,7 +4,7 @@
 # SBATCH --mail-type=fail,end
 # SBATCH --job-name="markDuplicates"
 # SBATCH --chdir=.
-# SBATCH --time=3: 00: 00
+# SBATCH --time=3:00:00
 # SBATCH --mem=4G
 # SBATCH --partition=pcourseb
 # SBATCH --output=markDuplicates_%j.out
